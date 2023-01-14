@@ -1,0 +1,8 @@
+- brew install 依赖的库: flock gmp 等
+- git clone https://github.com/riscv-collab/riscv-gnu-toolchain
+- cd riscv-gnu-toolchain
+- cd gdb
+- mv configure configure.orl
+- pwd  -> DIR （当前的绝对目录）
+- echo 'DIR/configure.orl --with-libgmp-prefix=/opt/homebrew/Cellar/gmp/6.2.1_1 $1 $2 $3 $4 $5 $6' > configure
+- ./configure --prefix=~/riscv_toolchain --enable-multilib
